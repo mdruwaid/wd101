@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Lamborghini, the Italian luxury sports car manufacturer known for its high-performance vehicles and innovative designs.">
+    <title>About Lamborghini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Set the background image for the entire page */
+        body {
+            background-image: url('holoBlobs.jpg'); /* Replace with the actual file name */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: white; /* Ensure text is readable on the dark background */
+        }
+
+        /* Add a semi-transparent overlay for better text readability */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="bg-blue-500 bg-opacity-80 text-white relative z-10">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="text-2xl font-bold">
+                <a href="#" class="hover:text-gray-200">My Web Page</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#about" class="hover:text-gray-200">About</a>
+                <a href="#services" class="hover:text-gray-200">Services</a>
+                <a href="#contact" class="hover:text-gray-200">Contact</a>
+                <a href="#login" class="hover:text-gray-200">Login</a>
+                <a href="#register" class="hover:text-gray-200">Register</a>
+                <a href="#search" class="hover:text-gray-200">Search</a>
+            </div>
+            <div>
+                <a href="#signin" class="bg-white text-blue-500 px-4 py-2 rounded-lg font-semibold hover:bg-gray-200">
+                    Sign In
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="text-center py-8 relative z-10">
+        <h1 class="text-4xl font-bold">Welcome to My Web Page</h1>
+        <h2 class="text-2xl mt-2">Learn About Lamborghini</h2>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 relative z-10">
+        <section id="about" class="mb-8">
+            <div class="flex flex-col md:flex-row items-center md:items-start">
+                <!-- Image -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <img
+                        src="lamborghini.jpg"
+                        alt="Lamborghini Logo"
+                        class="rounded-lg shadow-lg mx-auto md:mx-0"
+                        width="500"
+                        height="300"
+                    />
+                </div>
+                <!-- Text -->
+                <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0">
+                    <p class="mb-4">
+                        Lamborghini is an Italian luxury sports car manufacturer known for its high-performance vehicles and distinctive designs. Founded in 1963 by Ferruccio Lamborghini, the brand has become synonymous with speed, power, and opulence. Some of its most iconic models include the Miura, Countach, and Aventador. Lamborghini cars are often characterized by their sharp angles, aggressive styling, and powerful V10 and V12 engines. The brand is also known for its commitment to innovation and technology, making it a leader in the supercar segment.
+                    </p>
+                    <p>
+                        Lamborghini's headquarters is located in Sant'Agata Bolognese, Italy, where the cars are designed and manufactured. The brand has a strong motorsport heritage, participating in various racing events and championships. Lamborghini's commitment to performance and luxury has made it a favorite among car enthusiasts and collectors worldwide.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="mb-8">
+            <p class="mb-4">
+                In recent years, Lamborghini has also focused on sustainability, introducing hybrid models like the Sián and the Urus SUV, which combines luxury with practicality. The brand continues to push the boundaries of automotive engineering and design, making it a symbol of status and prestige in the automotive world.
+            </p>
+            <p>
+                Lamborghini's cars are not just vehicles; they are works of art that embody the spirit of speed and luxury. Whether on the road or the racetrack, a Lamborghini is sure to turn heads and leave a lasting impression.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 bg-opacity-20 text-white text-center py-4 relative z-10">
+        <p class="mb-2">
+            In conclusion, Lamborghini represents the pinnacle of automotive excellence, combining cutting-edge technology with breathtaking design. Its legacy continues to inspire car enthusiasts and collectors around the globe.
+        </p>
+        <p>
+            <a href="https://www.lamborghini.com/en-en" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Learn more about Lamborghini</a>
+        </p>
+    </footer>
+</body>
+</html>
