@@ -1,110 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Lamborghini, the Italian luxury sports car manufacturer known for its high-performance vehicles and innovative designs.">
-    <title>About Lamborghini</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Set the background image for the entire page */
-        body {
-            background-image: url('holoBlobs.jpg'); /* Replace with the actual file name */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            color: white; /* Ensure text is readable on the dark background */
-        }
-
-        /* Add a semi-transparent overlay for better text readability */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-            z-index: -1;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Validated Registration Form</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+    }
+    .warning {
+      color: red;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
-<body class="relative">
-    <!-- Overlay -->
-    <div class="overlay"></div>
+<body>
 
-    <!-- Navbar -->
-    <nav class="bg-blue-500 bg-opacity-80 text-white relative z-10">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <div class="text-2xl font-bold">
-                <a href="#" class="hover:text-gray-200">My Web Page</a>
-            </div>
-            <div class="flex space-x-4">
-                <a href="#about" class="hover:text-gray-200">About</a>
-                <a href="#services" class="hover:text-gray-200">Services</a>
-                <a href="#contact" class="hover:text-gray-200">Contact</a>
-                <a href="#login" class="hover:text-gray-200">Login</a>
-                <a href="#register" class="hover:text-gray-200">Register</a>
-                <a href="#search" class="hover:text-gray-200">Search</a>
-            </div>
-            <div>
-                <a href="#signin" class="bg-white text-blue-500 px-4 py-2 rounded-lg font-semibold hover:bg-gray-200">
-                    Sign In
-                </a>
-            </div>
-        </div>
-    </nav>
+  <h2>Registration Form</h2>
+  <form id="registrationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br><br>
 
-    <!-- Header -->
-    <header class="text-center py-8 relative z-10">
-        <h1 class="text-4xl font-bold">Welcome to My Web Page</h1>
-        <h2 class="text-2xl mt-2">Learn About Lamborghini</h2>
-    </header>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <span id="emailWarning" class="warning"></span><br><br>
 
-    <!-- Main Content -->
-    <main class="container mx-auto p-4 relative z-10">
-        <section id="about" class="mb-8">
-            <div class="flex flex-col md:flex-row items-center md:items-start">
-                <!-- Image -->
-                <div class="md:w-1/2 text-center md:text-left">
-                    <img
-                        src="lamborghini.jpg"
-                        alt="Lamborghini Logo"
-                        class="rounded-lg shadow-lg mx-auto md:mx-0"
-                        width="500"
-                        height="300"
-                    />
-                </div>
-                <!-- Text -->
-                <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0">
-                    <p class="mb-4">
-                        Lamborghini is an Italian luxury sports car manufacturer known for its high-performance vehicles and distinctive designs. Founded in 1963 by Ferruccio Lamborghini, the brand has become synonymous with speed, power, and opulence. Some of its most iconic models include the Miura, Countach, and Aventador. Lamborghini cars are often characterized by their sharp angles, aggressive styling, and powerful V10 and V12 engines. The brand is also known for its commitment to innovation and technology, making it a leader in the supercar segment.
-                    </p>
-                    <p>
-                        Lamborghini's headquarters is located in Sant'Agata Bolognese, Italy, where the cars are designed and manufactured. The brand has a strong motorsport heritage, participating in various racing events and championships. Lamborghini's commitment to performance and luxury has made it a favorite among car enthusiasts and collectors worldwide.
-                    </p>
-                </div>
-            </div>
-        </section>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br><br>
 
-        <section id="services" class="mb-8">
-            <p class="mb-4">
-                In recent years, Lamborghini has also focused on sustainability, introducing hybrid models like the Sián and the Urus SUV, which combines luxury with practicality. The brand continues to push the boundaries of automotive engineering and design, making it a symbol of status and prestige in the automotive world.
-            </p>
-            <p>
-                Lamborghini's cars are not just vehicles; they are works of art that embody the spirit of speed and luxury. Whether on the road or the racetrack, a Lamborghini is sure to turn heads and leave a lasting impression.
-            </p>
-        </section>
-    </main>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" required>
+    <span id="dobWarning" class="warning"></span><br><br>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 bg-opacity-20 text-white text-center py-4 relative z-10">
-        <p class="mb-2">
-            In conclusion, Lamborghini represents the pinnacle of automotive excellence, combining cutting-edge technology with breathtaking design. Its legacy continues to inspire car enthusiasts and collectors around the globe.
-        </p>
-        <p>
-            <a href="https://www.lamborghini.com/en-en" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Learn more about Lamborghini</a>
-        </p>
-    </footer>
+    <label>
+      <input type="checkbox" id="acceptTerms">
+      Accept terms and conditions
+    </label>
+    <span id="termsWarning" class="warning"></span><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Submitted Entries</h2>
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Dob</th>
+        <th>Accepted terms?</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Entries will be loaded here -->
+    </tbody>
+  </table>
+
+  <script>
+    const form = document.getElementById('registrationForm');
+    const tableBody = document.querySelector('#userTable tbody');
+
+    const emailWarning = document.getElementById('emailWarning');
+    const dobWarning = document.getElementById('dobWarning');
+    const termsWarning = document.getElementById('termsWarning');
+
+    function calculateAge(dob) {
+      const birthDate = new Date(dob);
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      return age;
+    }
+
+    function isValidEmail(email) {
+      const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      return pattern.test(email);
+    }
+
+    function loadEntries() {
+        tableBody.innerHTML = "";
+        const entries = JSON.parse(localStorage.getItem('userEntries')) || [];
+
+        entries.forEach((entry, index) => {
+            const row = tableBody.insertRow();
+
+            row.innerHTML = `
+            <td>${entry.name}</td>
+            <td>${entry.email}</td>
+            <td>${entry.password}</td>
+            <td>${entry.dob}</td>
+            <td>${entry.accepted}</td>
+            <td><button onclick="deleteEntry(${index})">Delete</button></td>
+            `;
+        });
+        }
+    function deleteEntry(index) {
+      const entries = JSON.parse(localStorage.getItem('userEntries')) || [];
+      entries.splice(index, 1);
+      localStorage.setItem('userEntries', JSON.stringify(entries));
+      loadEntries();
+    }
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Clear previous warnings
+      emailWarning.textContent = "";
+      dobWarning.textContent = "";
+      termsWarning.textContent = "";
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const dob = document.getElementById('dob').value;
+      const accepted = document.getElementById('acceptTerms').checked;
+
+      let isValid = true;
+
+      // Email validation
+      if (!isValidEmail(email)) {
+        emailWarning.textContent = " Please enter a valid email address.";
+        isValid = false;
+      }
+
+      // DOB validation
+      const age = calculateAge(dob);
+      if (!dob || age < 18 || age > 55) {
+        dobWarning.textContent = " Age must be between 18 and 55.";
+        isValid = false;
+      }
+
+      // Terms checkbox validation
+      if (!accepted) {
+        termsWarning.textContent = " You must accept the terms.";
+        isValid = false;
+      }
+
+      if (!isValid) return;
+
+      const entry = { name, email, password, dob, accepted };
+
+      const entries = JSON.parse(localStorage.getItem('userEntries')) || [];
+      entries.push(entry);
+      localStorage.setItem('userEntries', JSON.stringify(entries));
+
+      loadEntries();
+      form.reset();
+    });
+
+    window.onload = loadEntries;
+    function deleteEntry(index) {
+        const entries = JSON.parse(localStorage.getItem('userEntries')) || [];
+        entries.splice(index, 1); // Remove the selected entry
+        localStorage.setItem('userEntries', JSON.stringify(entries));
+        loadEntries();
+        }
+  </script>
+
 </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Validated Registration Form</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          background-color: #f9f9f9;
+          color: #333;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 20px;
+          min-height: 100vh;
+        }
+      
+        h2 {
+          color: #444;
+          margin-bottom: 20px;
+        }
+      
+        form {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          max-width: 400px;
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      
+        label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: bold;
+        }
+      
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+      
+        input[type="checkbox"] {
+          margin-right: 8px;
+        }
+      
+        button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+          width: 100%;
+        }
+      
+        button:hover {
+          background-color: #45a049;
+        }
+      
+        .warning {
+          color: red;
+          font-size: 0.9em;
+        }
+      
+        table {
+          width: 100%;
+          max-width: 800px;
+          border-collapse: collapse;
+          margin-top: 20px;
+          background-color: #fff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+      
+        th, td {
+          border: 1px solid #ddd;
+          padding: 12px;
+          text-align: left;
+        }
+      
+        th {
+          background-color: #f2f2f2;
+          font-weight: bold;
+        }
+      
+        tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+      
+        tr:hover {
+          background-color: #f1f1f1;
+        }
+      
+        td button {
+          background-color: #f44336;
+          color: white;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      
+        td button:hover {
+          background-color: #d32f2f;
+        }
+      
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+      </style>
+  </head>
 </html>
